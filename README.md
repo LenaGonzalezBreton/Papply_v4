@@ -17,7 +17,7 @@ You can easily manage practical works you gave to your students.
 Papply will be a software usable by our Teacher to check our practical work and see our progress
 
 
-![Logo](https://github.com/LenaGonzalezBreton/Papply/blob/master/Resources/Papply_logo.png)
+![Logo](https://github.com/LenaGonzalezBreton/Papply/blob/master/Assets/Papply_logo.png)
 
 ## Features
 
