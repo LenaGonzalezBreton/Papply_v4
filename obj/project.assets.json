@@ -4693,19 +4693,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\": {}
+    "C:\\Users\\jmeyer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utilisateur\\RiderProjects\\Papply\\Papply.csproj",
+      "projectUniqueName": "C:\\Users\\jmeyer\\Source\\Repos\\Papply\\Papply.csproj",
       "projectName": "Papply",
-      "projectPath": "C:\\Users\\Utilisateur\\RiderProjects\\Papply\\Papply.csproj",
-      "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utilisateur\\RiderProjects\\Papply\\obj\\",
+      "projectPath": "C:\\Users\\jmeyer\\Source\\Repos\\Papply\\Papply.csproj",
+      "packagesPath": "C:\\Users\\jmeyer\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jmeyer\\Source\\Repos\\Papply\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jmeyer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4772,7 +4772,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

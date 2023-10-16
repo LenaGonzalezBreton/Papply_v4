@@ -7,14 +7,29 @@
         x:Class="Papply.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="Papply">
+        Title="Papply"
+		WindowStartupLocation="CenterScreen"
+		Background="Transparent"
+		>
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
+		<DockPanel>
+			<UserControl Name="SideMenu" DockPanel.Dock="Left" MinWidth="120" MaxWidth="120">
+				<StackPanel>
+					<Button Name="btn_create" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="8,8,8,2" Height="32" Width="100" >Créer TP</Button>
+					<Button Name="btn_manage" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="8,8,8,2" Height="32" Width="100">Gestion TP</Button>
+				</StackPanel>
+			</UserControl>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+			<UserControl Name="MainContent">
+				<StackPanel>
+					<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+					<Button Command="{Binding MarkAsDoneCommand}">Changer Moi ce Texte</Button>
+				</StackPanel>
+			</UserControl>
+		</DockPanel>
 </Window>
