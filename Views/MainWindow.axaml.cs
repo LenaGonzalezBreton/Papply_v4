@@ -1,4 +1,6 @@
 using Avalonia.Controls;
+using Avalonia.Interactivity;
+using Papply.Views.TP;
 
 namespace Papply.Views;
 
@@ -8,4 +10,20 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
+
+    private void ChangeContent(UserControl newContent)
+    {
+        MainContent.Content = newContent;
+    }
+
+    private void btn_create_Click(object sender, RoutedEventArgs e)
+    {
+        ChangeContent(new CreateTP());
+    }
+
+    private void btn_manage_Click(object sender, RoutedEventArgs e)
+    {
+        ChangeContent(new GestionTp());
+    }
+
 }

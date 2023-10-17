@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jmeyer\\Source\\Repos\\Papply\\Papply.csproj": {}
+    "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jmeyer\\Source\\Repos\\Papply\\Papply.csproj": {
+    "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jmeyer\\Source\\Repos\\Papply\\Papply.csproj",
+        "projectUniqueName": "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj",
         "projectName": "Papply",
-        "projectPath": "C:\\Users\\jmeyer\\Source\\Repos\\Papply\\Papply.csproj",
+        "projectPath": "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj",
         "packagesPath": "C:\\Users\\jmeyer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jmeyer\\Source\\Repos\\Papply\\obj\\",
+        "outputPath": "C:\\Users\\jmeyer\\source\\repos\\Papply\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jmeyer\\AppData\\Roaming\\NuGet\\NuGet.Config",

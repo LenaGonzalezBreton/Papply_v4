@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6K6FeeOzkgOG/E+CpOMctCnR5Z4q7EzhkAUrkyfJbYlnNHDsFpT8+2g1GlTcpusYvijb81rcJIW8eHxpkeOT+g==",
+  "dgSpecHash": "CPs+wgM+66gjLvhHPTWLOQ21nbtIp5bokIZJS2cmrd8YK3fHzCncZyemOtet4d5vuAIXGaNovpbdQf49x1tfJQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jmeyer\\Source\\Repos\\Papply\\Papply.csproj",
+  "projectFilePath": "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jmeyer\\.nuget\\packages\\avalonia\\11.0.2\\avalonia.11.0.2.nupkg.sha512",
     "C:\\Users\\jmeyer\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.0.2023020321\\avalonia.angle.windows.natives.2.1.0.2023020321.nupkg.sha512",

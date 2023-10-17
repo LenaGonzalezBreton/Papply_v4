@@ -20,8 +20,8 @@
 		<DockPanel>
 			<UserControl Name="SideMenu" DockPanel.Dock="Left" MinWidth="120" MaxWidth="120">
 				<StackPanel>
-					<Button Name="btn_create" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="8,8,8,2" Height="32" Width="100" >Créer TP</Button>
-					<Button Name="btn_manage" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="8,8,8,2" Height="32" Width="100">Gestion TP</Button>
+					<Button Name="btn_create" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="8,8,8,2" Height="32" Width="100" Click="btn_create_Click">Créer TP</Button>
+					<Button Name="btn_manage" Command="{Binding GestionTPCommand}" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_manage_Click" Margin="8,8,8,2" Height="32" Width="100">Gestion TP</Button>
 				</StackPanel>
 			</UserControl>
 
