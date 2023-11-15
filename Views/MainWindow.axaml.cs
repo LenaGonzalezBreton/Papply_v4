@@ -11,6 +11,11 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
+    private void Window_Loaded(object sender, RoutedEventArgs e)
+    {
+        MainContent.Content = new CreateTP();
+    }
+
     private void ChangeContent(UserControl newContent)
     {
         MainContent.Content = newContent;

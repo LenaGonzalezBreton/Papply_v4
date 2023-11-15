@@ -1,22 +1,42 @@
 ﻿using Papply.Models;
-using System;
+using Papply.ViewModels;
 using System.Collections.Generic;
-using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
 
 
 namespace PapplyAppli.Classes
 {
-    public class GroupTask
+    public class GroupTask : ViewModelBase
     {
-        List<Papply.Models.Task> _listtask = new List<Papply.Models.Task>();
-        public int _id { get; set; }
-        public bool _isvalid { get; set; }
-        public double _total { get; set; }
-        public string _title { get; set; }
-        public string _desc { get; set; }
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+
+        public List<Papply.Models.Task> _listtask = new List<Papply.Models.Task>();
+        public int _id;
+        public bool _isvalid;
+
+        public double PointTask {
+
+            get { return _total; }
+            set
+            {
+                _total = value;
+            }
+        }
+        private double _total;
+
+        public string Title;
+        private string _title;
+
+        public string Description;
+        private string _desc;
+        public CardControl _partcard {  get; set; } = new CardControl(1);
+
+
+
+
 
 
         public List<Papply.Models.Task> GetTasks()
@@ -28,12 +48,22 @@ namespace PapplyAppli.Classes
             this._listtask = list;
         }
 
+        public void addTask(Papply.Models.Task task)
+        {
+            _listtask.Add(task);
+        }
+
+        public void removeTaskbyID(int pos)
+        {
+            _listtask.RemoveAt(pos);
+        }
+
         public double CalculTotal()
         {
             double res = 0;
             foreach(Papply.Models.Task task in _listtask)
             {
-                res += task._pointtask;
+                res += task.PointTask;
             }
             return res;
         }
@@ -46,8 +76,6 @@ namespace PapplyAppli.Classes
             _total = CalculTotal();
             _desc = desc;
             _title = title;
-
-           
         }
 
         public GroupTask(int id, bool isvalid, List<Papply.Models.Task> listtask)
@@ -56,7 +84,16 @@ namespace PapplyAppli.Classes
             this._isvalid = isvalid;
             _listtask = listtask;
             _total = CalculTotal();
+        }
 
+        public GroupTask()
+        {
+            _id =0;
+            _isvalid = false;
+            _total = this.CalculTotal();
+            _title = "Titre";
+            _desc = "Description";
+            _listtask.Add(new Papply.Models.Task());
         }
 
     }

@@ -15,12 +15,10 @@ public class MainWindowViewModel : ViewModelBase
         set => this.RaiseAndSetIfChanged(ref _greeting, value);
     }
     public ICommand MarkAsDoneCommand { get; set; }
-    public ICommand GestionTPCommand { get; set; }
 
     public MainWindowViewModel()
     {
         MarkAsDoneCommand = ReactiveCommand.Create(MarkAsDone);
-        GestionTPCommand = ReactiveCommand.Create(ManageTP);
     }
 
     void MarkAsDone()
@@ -35,10 +33,5 @@ public class MainWindowViewModel : ViewModelBase
         {
             this.Greeting = "Tuez Willy " + x.ToString();
         }
-    }
-    
-    void ManageTP()
-    {
-        
     }
 }

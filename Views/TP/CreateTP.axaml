@@ -2,9 +2,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Papply.Views.TP.CreateTP">
-	<StackPanel>
+			 xmlns:local="clr-namespace:Papply.ViewModels;assembly=Papply"
+			 xmlns:card="clr-namespace:Papply.Models;assembly=Papply"
+             mc:Ignorable="d" d:DesignWidth="1300" d:DesignHeight="800"
+             x:Class="Papply.Views.TP.CreateTP"
+			 x:DataType="local:CreateTPViewModel"
+			 >
+	
+		<StackPanel Spacing="15" Background="LightGray">
+			<StackPanel Orientation="Vertical">
+				<TextBlock FontWeight="Bold" Margin="12" Foreground="#41448A" >Nom du TP</TextBlock>
+				<TextBox Width="170" HorizontalAlignment="Left" Margin="10,5,0,0" Background="White"></TextBox>
+			</StackPanel>
+
+			<Label Margin="12,0,0,0" FontWeight="Bold" Foreground="#41448A">Création de Parties</Label>
+			<Button FontWeight="Bold" Foreground="Black" Name="btn_addpart" Margin="15,0,15,15" Click="btn_addpart_Click" Background="White">Ajouter Partie</Button>
 		
-	</StackPanel>
+			<ScrollViewer HorizontalScrollBarVisibility="Auto">
+				<ItemsControl ItemsSource="{Binding PartCards}" HorizontalAlignment="Left">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<card:CardControl></card:CardControl>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+			</ScrollViewer>
+
+			<Label Margin="12,0,0,0" FontWeight="Bold" Foreground="#41448A">Création de Tâches</Label>
+			<Label Margin="12,0,0,0" FontWeight="Bold" Foreground="#41448A">Partie 1</Label>
+
+			<Button FontWeight="Bold" Foreground="Black" Name="btn_addspart" Margin="15,0,15,15" Click="btn_addspart_Click" Background="White">Ajouter Sous-Partie</Button>
+
+			<ScrollViewer HorizontalScrollBarVisibility="Auto">
+				<ItemsControl ItemsSource="{Binding SPartCards}" HorizontalAlignment="Left">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<card:CardControl></card:CardControl>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+			</ScrollViewer>
+		</StackPanel>
 </UserControl>

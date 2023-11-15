@@ -9,7 +9,8 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="Papply"
 		WindowStartupLocation="CenterScreen"
-		Background="Transparent"
+		WindowState="Maximized"
+		Loaded="Window_Loaded"
 		>
 
     <Design.DataContext>
@@ -18,10 +19,14 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 		<DockPanel>
-			<UserControl Name="SideMenu" DockPanel.Dock="Left" MinWidth="120" MaxWidth="120">
+			<UserControl Name="SideMenu" DockPanel.Dock="Left" MinWidth="130" MaxWidth="130" Background="#41448A">
 				<StackPanel>
-					<Button Name="btn_create" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="8,8,8,2" Height="32" Width="100" Click="btn_create_Click">Créer TP</Button>
-					<Button Name="btn_manage" Command="{Binding GestionTPCommand}" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_manage_Click" Margin="8,8,8,2" Height="32" Width="100">Gestion TP</Button>
+					<Image Source="/Assets/Papply_logo.png" Width="95"></Image>
+					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_dashboard" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_manage_Click" Margin="8,8,8,2" Height="32" Width="112">DashBoard</Button>
+					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_create" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="8,8,8,2" Height="32" Width="112" Click="btn_create_Click">Création TP</Button>
+					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_manage" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_manage_Click" Margin="8,8,8,2" Height="32" Width="112">Gestion TP</Button>
+					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_historique" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_manage_Click" Margin="8,8,8,2" Height="32" Width="112">Historique TP</Button>
+					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_list" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_manage_Click" Margin="8,8,8,2" Height="32" Width="112">Liste Elèves</Button>
 				</StackPanel>
 			</UserControl>
 
