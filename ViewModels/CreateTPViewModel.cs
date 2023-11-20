@@ -15,11 +15,6 @@ namespace Papply.ViewModels
         public ObservableCollection<Task> Tasks { get; set; }
         public Degree TP { get; }
 
-        
-
-
-        
-
         public CreateTPViewModel(Degree tp)
         {
             TP = tp;
