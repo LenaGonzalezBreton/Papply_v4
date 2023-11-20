@@ -8,7 +8,15 @@ namespace Papply.Models
     {
         public double PointTask {  get; set; }
 
-        public string Title {  get; set; }
+        private string _title;
+        public string Title
+        {
+            get => _title;
+            set
+            {
+                _title = value;
+            }
+        }
 
         public string Description {  get; set; }
 
@@ -17,9 +25,15 @@ namespace Papply.Models
         public Task()
         {
             PointTask = 0;
-            Title = "Titre";
-            Description = string.Empty;
-            card = new CardControl(0);
+            Title = "Titre Sous Partie";
+            Description = "Description Sous Partie";
+        }
+
+        public Task(double pointTask, string title, string description)
+        {
+            PointTask = pointTask;
+            Title = title;
+            Description = description;
         }
     }
 }

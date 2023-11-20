@@ -9,23 +9,27 @@ namespace PapplyAppli.Classes
     public class Degree
     {
         // attributs
-        private int _idDegree { get; set; } 
-        private string _libDegree { get; set; }
-        public List<GroupTask> _gtaskList { get; set; } = new List<GroupTask>();
-        
+        public int IDDegree { get; set; } 
+        public string TitreDegree { get; set; }
 
+        public List<Task> Tasks { get; set; }
 
-        // constructeur
+        public double Total;
+
         public Degree(int idDegree, string libDegree )
         {
-            _idDegree = idDegree;
-            _libDegree = libDegree;
-            _gtaskList.Add(new GroupTask());
+            IDDegree = idDegree;
+            TitreDegree = libDegree;
+            Tasks = new List<Task>();
         }
 
-        // accesseurs
+        public Degree()
+        {
+            IDDegree += 1;
+            TitreDegree += 1;
+            Tasks = new List<Task>();
+        }
 
-        // methodes
 
 
 

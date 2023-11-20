@@ -1,52 +1,36 @@
-﻿using Papply.Models;
+﻿using Avalonia.Controls;
+using Avalonia.Rendering;
+using Papply.Models;
 using PapplyAppli.Classes;
+using ReactiveUI;
+using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using Task = Papply.Models.Task;
+using System.Windows.Input;
 
 namespace Papply.ViewModels
 {
-    public class CreateTPViewModel
+    public class CreateTPViewModel : ViewModelBase
     {
-        public ObservableCollection<GroupTask> GroupTasks { get; set; }
-        public ObservableCollection<CardControl> PartCards { get; set; }
 
-        public ObservableCollection<CardControl> SPartCards {  get; set; }
+        public ObservableCollection<Task> Tasks { get; set; }
+        public Degree TP { get; }
 
-        public int index = 0;
+        
 
-        public CreateTPViewModel(Degree TP)
+
+        
+
+        public CreateTPViewModel(Degree tp)
         {
-            GroupTasks = new ObservableCollection<GroupTask>(TP._gtaskList);
-            PartCards = new ObservableCollection<CardControl>();
-            SPartCards = new ObservableCollection<CardControl>();
-            foreach(GroupTask g in TP._gtaskList)
-            {
-                PartCards.Add(g._partcard);
-                foreach(Task t in g._listtask)
-                {
-                    SPartCards.Add(t.card);
-                }
-            }
+            TP = tp;
+            Tasks = new ObservableCollection<Task>();
+            Tasks.Add(new Task(1, "Partie SQL", "Crée le script de BDD"));
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        public void AddTask()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        private GroupTask selectedPart;
-        public GroupTask SelectedPart { 
-            get {
-                return GroupTasks[index]; 
-            } 
-            set {
-                selectedPart = value;
-                OnPropertyChanged();
-            }
+            var newTask = new Task();
+            Tasks.Add(newTask);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Papply.Models
 {
     public partial class CardControl : UserControl
     {
-        public CardControl(int x)
+        /*public CardControl(int x)
         {
             InitializeComponent();
             if (x == 0)
@@ -34,6 +34,6 @@ namespace Papply.Models
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
-        }
+        }*/
     }
 }

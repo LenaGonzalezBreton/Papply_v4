@@ -15,32 +15,44 @@
 				<TextBox Width="170" HorizontalAlignment="Left" Margin="10,5,0,0" Background="White"></TextBox>
 			</StackPanel>
 
-			<Label Margin="12,0,0,0" FontWeight="Bold" Foreground="#41448A">Création de Parties</Label>
-			<Button FontWeight="Bold" Foreground="Black" Name="btn_addpart" Margin="15,0,15,15" Click="btn_addpart_Click" Background="White">Ajouter Partie</Button>
-		
+			<Label Margin="12,0,0,0" FontWeight="Bold" Foreground="#41448A">Création des Tâches</Label>
+			<Button FontWeight="Bold" Foreground="Black" Name="btn_addpart" Margin="15,0,15,15" Command="{Binding AddTask}" Background="White">Ajouter Partie</Button>
 			<ScrollViewer HorizontalScrollBarVisibility="Auto">
-				<ItemsControl ItemsSource="{Binding PartCards}" HorizontalAlignment="Left">
+				<ItemsControl ItemsSource="{Binding Tasks}">
+					
+					<ItemsControl.ItemsPanel>
+						<ItemsPanelTemplate>
+							<WrapPanel Orientation="Horizontal"/>
+						</ItemsPanelTemplate>
+					</ItemsControl.ItemsPanel>
+					
 					<ItemsControl.ItemTemplate>
 						<DataTemplate>
-							<card:CardControl></card:CardControl>
+							<Border Background="#FF3D00" CornerRadius="10" Padding="10" Margin="0,0,10,10">
+								<StackPanel Spacing="10">
+									<TextBlock Name="Titre" Foreground="Black" Text="Titre" FontWeight="Bold" FontSize="16"/>
+									<Label Name="merde" Content="{Binding Title}"></Label>
+									<TextBox Name="title" Text="{Binding Title}"></TextBox>
+									<TextBlock Text="Description" Foreground="Black" FontWeight="Bold" FontSize="16"/>
+									<TextBox Height="150" Name="desc" Text="{Binding Description}"></TextBox>
+									
+									<StackPanel Orientation="Horizontal">
+										<StackPanel>
+											<NumericUpDown Minimum="0" FontWeight="Bold" Background="LightGray" Name="point" Value="{Binding PointTask}" Width="120" HorizontalAlignment="Left" Foreground="Black"></NumericUpDown>
+											<Label Foreground="Black" VerticalAlignment="Bottom" FontWeight="Bold" HorizontalAlignment="Left" Content="NbPoint"/>
+										</StackPanel>
+
+										<StackPanel Margin="48,0,0,0" VerticalAlignment="Center">
+											<TextBlock FontWeight="Bold" Foreground="Black">NC</TextBlock>
+										</StackPanel>
+									</StackPanel>
+								</StackPanel>
+							</Border>
 						</DataTemplate>
 					</ItemsControl.ItemTemplate>
 				</ItemsControl>
 			</ScrollViewer>
 
-			<Label Margin="12,0,0,0" FontWeight="Bold" Foreground="#41448A">Création de Tâches</Label>
-			<Label Margin="12,0,0,0" FontWeight="Bold" Foreground="#41448A">Partie 1</Label>
-
-			<Button FontWeight="Bold" Foreground="Black" Name="btn_addspart" Margin="15,0,15,15" Click="btn_addspart_Click" Background="White">Ajouter Sous-Partie</Button>
-
-			<ScrollViewer HorizontalScrollBarVisibility="Auto">
-				<ItemsControl ItemsSource="{Binding SPartCards}" HorizontalAlignment="Left">
-					<ItemsControl.ItemTemplate>
-						<DataTemplate>
-							<card:CardControl></card:CardControl>
-						</DataTemplate>
-					</ItemsControl.ItemTemplate>
-				</ItemsControl>
-			</ScrollViewer>
 		</StackPanel>
 </UserControl>
+
