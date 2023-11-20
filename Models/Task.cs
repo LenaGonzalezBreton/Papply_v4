@@ -4,9 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace Papply.Models
 {
-    public class Task
+    public class Task : ViewModelBase
     {
-        public double PointTask {  get; set; }
+        private double _pointtask;
+        public double PointTask {  
+            get=>_pointtask;
+            set
+            {
+                _pointtask = value;
+                OnPropertyChanged();
+            }
+        }
 
         private string _title;
         public string Title
@@ -15,10 +23,18 @@ namespace Papply.Models
             set
             {
                 _title = value;
+                OnPropertyChanged();
             }
         }
 
-        public string Description {  get; set; }
+        private string _description;
+        public string Description {  
+            get=>_description; 
+            set {
+                _description=value;
+                OnPropertyChanged();
+            } 
+        }
 
         public Task()
         {

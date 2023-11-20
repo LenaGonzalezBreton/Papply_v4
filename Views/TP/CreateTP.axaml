@@ -31,14 +31,13 @@
 							<Border Background="#FF3D00" CornerRadius="10" Padding="10" Margin="0,0,10,10">
 								<StackPanel Spacing="10">
 									<TextBlock Name="Titre" Foreground="Black" Text="Titre" FontWeight="Bold" FontSize="16"/>
-									<Label Name="merde" Content="{Binding Title}"></Label>
-									<TextBox Name="title" Text="{Binding Title}"></TextBox>
+									<TextBox Name="title" Text="{Binding Title,Mode=TwoWay}"></TextBox>
 									<TextBlock Text="Description" Foreground="Black" FontWeight="Bold" FontSize="16"/>
-									<TextBox Height="150" Name="desc" Text="{Binding Description}"></TextBox>
+									<TextBox Height="150" Name="desc" Text="{Binding Description},Mode=TwoWay"></TextBox>
 									
 									<StackPanel Orientation="Horizontal">
 										<StackPanel>
-											<NumericUpDown Minimum="0" FontWeight="Bold" Background="LightGray" Name="point" Value="{Binding PointTask}" Width="120" HorizontalAlignment="Left" Foreground="Black"></NumericUpDown>
+											<NumericUpDown Minimum="0" FontWeight="Bold" Background="LightGray" Name="point" Value="{Binding PointTask,Mode=TwoWay}" Width="120" HorizontalAlignment="Left" Foreground="Black"></NumericUpDown>
 											<Label Foreground="Black" VerticalAlignment="Bottom" FontWeight="Bold" HorizontalAlignment="Left" Content="NbPoint"/>
 										</StackPanel>
 
