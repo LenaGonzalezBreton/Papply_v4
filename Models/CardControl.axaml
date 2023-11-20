@@ -5,7 +5,7 @@
              x:DataType="local:Task"
              Width="250" Height="330"
              Margin="5,0,0,0">
-	<Border Background="#FF3D00" CornerRadius="10" Padding="10" Margin="">
+	<Border Background="#FF3D00" CornerRadius="10" Padding="10">
 		<StackPanel Spacing="10">
 			<TextBlock Name="Titre" Foreground="Black" Text="{Binding Title}" FontWeight="Bold" FontSize="16"/>
 
