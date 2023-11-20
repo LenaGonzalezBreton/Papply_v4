@@ -27,7 +27,14 @@ namespace PapplyAppli.Classes
         }
         private double _total;
 
-        public string Title;
+        public string Title
+        {
+            get { return _title; }
+            set
+            {
+                _title = value;
+            }
+        }
         private string _title;
 
         public string Description;
