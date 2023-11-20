@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" Background="#D9D9D9"
+             x:Class="Papply.Views.DashBoard">
+
+	<StackPanel Orientation="Vertical">
+		<Grid ColumnDefinitions="1* 2*">
+			<Border Grid.Column="0" Background="#9190CD" CornerRadius="10" Margin="10">
+				<StackPanel Orientation="Vertical">					
+					<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold" Margin="">TP en cours</Label>
+				</StackPanel>
+			</Border>
+			<Border Grid.Column="2" Background="#FFFFFF" CornerRadius="10" Margin="10">
+				<Grid ColumnDefinitions="* *">
+
+					<StackPanel Grid.Column="0" Orientation="Vertical" Margin="10">
+						<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold" Margin="">Élève en difficulté</Label>
+						<Border Background="#191C58" CornerRadius="10">
+							<Label HorizontalAlignment="Center" Foreground="#FFFFFF" FontWeight="Bold" Margin="">Nom de l'élève</Label>
+						</Border>
+					</StackPanel>
+
+					<StackPanel Grid.Column="1" Orientation="Vertical" Margin="10">
+						<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold" Margin="">Élève ayant terminé</Label>
+						<Border Background="#191C58" CornerRadius="10">
+							<Label HorizontalAlignment="Center" Foreground="#FFFFFF" FontWeight="Bold" Margin="">Nom de l'élève</Label>
+						</Border>
+					</StackPanel>
+
+				</Grid>
+			</Border>
+		</Grid>
+	</StackPanel>
+	
+</UserControl>
