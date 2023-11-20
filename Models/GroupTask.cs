@@ -12,6 +12,10 @@ namespace PapplyAppli.Classes
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public List<Papply.Models.Task> _listtask = new List<Papply.Models.Task>();
         public int _id;
@@ -23,6 +27,7 @@ namespace PapplyAppli.Classes
             set
             {
                 _total = value;
+                OnPropertyChanged();
             }
         }
         private double _total;
@@ -33,18 +38,23 @@ namespace PapplyAppli.Classes
             set
             {
                 _title = value;
+                OnPropertyChanged();
             }
         }
         private string _title;
 
-        public string Description;
+        public string Description
+        {
+            get { return _desc; }
+            
+            set {
+                _desc = value;
+                OnPropertyChanged();
+            } 
+        }
         private string _desc;
+
         public CardControl _partcard {  get; set; } = new CardControl(1);
-
-
-
-
-
 
         public List<Papply.Models.Task> GetTasks()
         {
