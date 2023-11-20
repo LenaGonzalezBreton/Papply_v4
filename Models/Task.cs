@@ -20,8 +20,6 @@ namespace Papply.Models
 
         public string Description {  get; set; }
 
-        public CardControl card { get; set; }
-
         public Task()
         {
             PointTask = 0;
