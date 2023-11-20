@@ -33,54 +33,5 @@
 			</Border>
 		</Grid>
 	</StackPanel>
-
-		
-		<!--
-		<Border  Grid.Row="0" Grid.Column="1" Background="#FFFFFF" CornerRadius="10" Margin="100" HorizontalAlignment="Center">
-
-			<StackPanel Orientation="Horizontal" >
-
-				<StackPanel Orientation="Vertical" Margin="20">
-					<TextBlock Text="Élève en difficulté" Foreground="#191C58" FontWeight="Bold" Margin="64 8 64 8"></TextBlock>
-					<Border Background="#191C58" CornerRadius="10"> 
-					<TextBlock Text="Nom de l'élève" Foreground="#FFFFFF" FontWeight="Bold" Margin="64 8 64 8"></TextBlock>
-					</Border>
-				</StackPanel>
-
-				<StackPanel Orientation="Vertical" Margin="20">
-					<TextBlock Text="Élève ayant terminé" Foreground="#191C58" FontWeight="Bold" Margin="64 8 64 8"></TextBlock>
-					<Border Background="#191C58" CornerRadius="10">
-						<TextBlock Text="Nom de l'élève" Foreground="#FFFFFF" FontWeight="Bold" Margin="64 8 64 8"></TextBlock>
-					</Border>
-				</StackPanel>
-
-			</StackPanel>
-
-		</Border>
-		-->
-
-		<!--<Border  Grid.Row="1" Grid.Column="1" Background="#FFFFFF" CornerRadius="10" Margin="0" HorizontalAlignment="Center">
-
-			<StackPanel Orientation="Horizontal" >
-
-				<StackPanel Orientation="Vertical" Margin="20">
-					<TextBlock Text="Élève en difficulté" Foreground="#191C58" FontWeight="Bold" Margin="64 8 64 8"></TextBlock>
-					<Border Background="#191C58" CornerRadius="10">
-						<TextBlock Text="Nom de l'élève" Foreground="#FFFFFF" FontWeight="Bold" Margin="64 8 64 8"></TextBlock>
-					</Border>
-				</StackPanel>
-
-				<StackPanel Orientation="Vertical" Margin="20">
-					<TextBlock Text="Élève ayant terminé" Foreground="#191C58" FontWeight="Bold" Margin="64 8 64 8"></TextBlock>
-					<Border Background="#191C58" CornerRadius="10">
-						<TextBlock Text="Nom de l'élève" Foreground="#FFFFFF" FontWeight="Bold" Margin="64 8 64 8"></TextBlock>
-					</Border>
-				</StackPanel>
-
-			</StackPanel>
-
-		</Border>
-
-	</Grid>
--->	
+	
 </UserControl>
