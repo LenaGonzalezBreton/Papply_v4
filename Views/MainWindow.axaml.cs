@@ -15,7 +15,10 @@ public partial class MainWindow : Window
     {
         MainContent.Content = new CreateTP();
     }
-
+    private void btn_dashboard_Click(object sender, RoutedEventArgs e)
+    {
+        ChangeContent(new DashBoard());
+    }
     private void ChangeContent(UserControl newContent)
     {
         MainContent.Content = newContent;
