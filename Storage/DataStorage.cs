@@ -1,14 +1,14 @@
 ﻿using DynamicData;
 using Papply.Models;
-
+using System.Threading.Tasks;
 
 namespace Papply.Storage
 {
     static class DataStorage
     {
-        public static SourceCache<Degree, int> Degrees = new(d => d.IDDegree);
-        public static SourceCache<Promotion, int> Promotions = new(p => p.IDPromotion);
-        public static SourceCache<Student, int> Students = new(s => s.IDStudent);
-        public static SourceCache<Task, int> Tasks = new(t => t.IDTask);
+        public static SourceCache<Models.Tp, int> TPS = new(t => t.IdTp);
+        public static SourceCache<Models.Promotion, int> Promotions = new(p => p.IDPromotion);
+        public static SourceCache<Models.Student, int> Students = new(s => s.IdStudent);
+        public static SourceCache<Models.Task, int> Tasks = new(t => t.IdTask);
     }
 }
