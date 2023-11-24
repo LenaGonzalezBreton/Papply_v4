@@ -1,15 +1,22 @@
-﻿using ReactiveUI;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
+﻿using DynamicData;
+using Papply.Storage;
+using Papply.Models;
+using ReactiveUI;
+using System;
+using System.Collections.ObjectModel;
 
 namespace Papply.ViewModels;
 
-public class ViewModelBase : ReactiveObject, INotifyPropertyChanged
-{
-    public event PropertyChangedEventHandler PropertyChanged;
+public class ViewModelBase{
 
-    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    private readonly ReadOnlyObservableCollection<Degree> _degrees;
+    public ReadOnlyObservableCollection<Degree> Degrees => _degrees;
+
+    public ViewModelBase()
     {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        DataStorage.Degrees
+            .Connect()
+            .Bind(out _degrees)
+            .Subscribe();
     }
 }

@@ -1,31 +1,30 @@
-﻿using Avalonia.Controls;
-using Avalonia.Rendering;
+﻿using DynamicData;
+using Microsoft.VisualBasic;
 using Papply.Models;
-using PapplyAppli.Classes;
-using ReactiveUI;
-using System;
+using Papply.Storage;
 using System.Collections.ObjectModel;
-using System.Windows.Input;
 
 namespace Papply.ViewModels
 {
+
     public class CreateTPViewModel : ViewModelBase
     {
+        public ObservableCollection<string> ListPromo { get; set; }
+        public ObservableCollection<string> Task_Titles { get; set; }
+        public Degree newTP { get; }
 
-        public ObservableCollection<Task> Tasks { get; set; }
-        public Degree TP { get; }
 
-        public CreateTPViewModel(Degree tp)
+        public CreateTPViewModel(Models.Degree tp)
         {
-            TP = tp;
-            Tasks = new ObservableCollection<Task>();
-            Tasks.Add(new Task(1, "Partie SQL", "Crée le script de BDD"));
+            newTP = new Degree();
+            DataStorage.Tasks.AddOrUpdate(new Task(1, "Partie SQL", "Crée le script de BDD",newTP.IDDegree));
         }
 
         public void AddTask()
         {
-            var newTask = new Task();
-            Tasks.Add(newTask);
+            Models.Task newTask = new Models.Task();
+            DataStorage.Tasks.AddOrUpdate(newTask);
+            newTP.test = DateAndTime.Now;
         }
     }
 }

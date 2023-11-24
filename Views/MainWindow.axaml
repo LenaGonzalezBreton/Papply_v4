@@ -30,10 +30,7 @@
 
 			<ScrollViewer HorizontalScrollBarVisibility="Auto">
 				<UserControl Name="MainContent">
-					<StackPanel>
-						<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-						<Button Command="{Binding MarkAsDoneCommand}">Changer Moi ce Texte</Button>
-					</StackPanel>
+
 				</UserControl>
 			</ScrollViewer>
 		</DockPanel>
