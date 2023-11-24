@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "al5WSCmzwpr+EIpT5HLRB3T4Dm5CuCGSumv2dpC3nyimw7u25ZJGieEN/0xj973AoM9Snk9LBFPvEYSprVtLnQ==",
+  "dgSpecHash": "4krcbAsGlgkgsTXFHHZMNHtC4O75h4AprkejLhdS62q5a1+e+pshfm+ZjP1CjKbqi2IBYWH2aqsOEBjO71N7eQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lecoq\\Source\\Repos\\Papply\\Papply.csproj",
+  "projectFilePath": "C:\\Users\\lecoq\\source\\repos\\Papply\\Papply.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lecoq\\.nuget\\packages\\avalonia\\11.0.2\\avalonia.11.0.2.nupkg.sha512",
     "C:\\Users\\lecoq\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.0.2023020321\\avalonia.angle.windows.natives.2.1.0.2023020321.nupkg.sha512",

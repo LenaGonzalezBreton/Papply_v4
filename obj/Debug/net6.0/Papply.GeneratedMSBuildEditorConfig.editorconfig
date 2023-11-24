@@ -13,19 +13,19 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Papply
-build_property.ProjectDir = C:\Users\lecoq\Source\Repos\Papply\
+build_property.ProjectDir = C:\Users\lecoq\source\repos\Papply\
 
-[C:/Users/lecoq/Source/Repos/Papply/App.axaml]
+[C:/Users/lecoq/source/repos/Papply/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/lecoq/Source/Repos/Papply/Views/Dashboard.axaml]
+[C:/Users/lecoq/source/repos/Papply/Views/Dashboard.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/lecoq/Source/Repos/Papply/Views/MainWindow.axaml]
+[C:/Users/lecoq/source/repos/Papply/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/lecoq/Source/Repos/Papply/Views/TP/CreateTP.axaml]
+[C:/Users/lecoq/source/repos/Papply/Views/TP/CreateTP.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/lecoq/Source/Repos/Papply/Views/TP/GestionTp.axaml]
+[C:/Users/lecoq/source/repos/Papply/Views/TP/GestionTp.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

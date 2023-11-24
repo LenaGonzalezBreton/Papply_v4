@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lecoq\\Source\\Repos\\Papply\\Papply.csproj": {}
+    "C:\\Users\\lecoq\\source\\repos\\Papply\\Papply.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lecoq\\Source\\Repos\\Papply\\Papply.csproj": {
+    "C:\\Users\\lecoq\\source\\repos\\Papply\\Papply.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lecoq\\Source\\Repos\\Papply\\Papply.csproj",
+        "projectUniqueName": "C:\\Users\\lecoq\\source\\repos\\Papply\\Papply.csproj",
         "projectName": "Papply",
-        "projectPath": "C:\\Users\\lecoq\\Source\\Repos\\Papply\\Papply.csproj",
+        "projectPath": "C:\\Users\\lecoq\\source\\repos\\Papply\\Papply.csproj",
         "packagesPath": "C:\\Users\\lecoq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lecoq\\Source\\Repos\\Papply\\obj\\",
+        "outputPath": "C:\\Users\\lecoq\\source\\repos\\Papply\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lecoq\\AppData\\Roaming\\NuGet\\NuGet.Config",

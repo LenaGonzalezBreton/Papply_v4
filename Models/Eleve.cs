@@ -14,5 +14,16 @@ namespace Papply.Models
         public string MailEleve { get; set; }
         public string PasswordEleve { get; set; }
 
+
+        public Eleve(int idEleve, string nomEleve, string prenomEleve, string mailEleve, string passwordEleve) 
+        { 
+            this.IdEleve = idEleve;
+            this.NomEleve = nomEleve;
+            this.PrenomEleve = prenomEleve;
+            this.MailEleve = mailEleve;
+            this.PasswordEleve = passwordEleve;
+        }
+
+
     }
 }

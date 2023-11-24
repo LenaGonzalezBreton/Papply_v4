@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Papply.ViewModels
 {
-    internal class DashboardViewModel
+    public class DashboardViewModel
     {
 
     }
