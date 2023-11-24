@@ -1,53 +1,36 @@
 ﻿using Papply.ViewModels;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace Papply.Models
 {
-    public class Task : ViewModelBase
+    public class Task
     {
-        private double _pointtask;
-        public double PointTask {  
-            get=>_pointtask;
-            set
-            {
-                _pointtask = value;
-                OnPropertyChanged();
-            }
-        }
+        public int IDTask { get; set; }
+        public double PointTask { get;set;}
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public int IdDegree {  get; set; }
 
-        private string _title;
-        public string Title
-        {
-            get => _title;
-            set
-            {
-                _title = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private string _description;
-        public string Description {  
-            get=>_description; 
-            set {
-                _description=value;
-                OnPropertyChanged();
-            } 
-        }
+        static Random index = new Random();
 
         public Task()
         {
+            IDTask = index.Next(0,1000000000);
             PointTask = 0;
             Title = "Titre Sous Partie";
             Description = "Description Sous Partie";
+            IdDegree = 0;
         }
 
-        public Task(double pointTask, string title, string description)
+        public Task(int idtask,double pointTask, string title, string description,int fkidtp)
         {
+            IDTask = idtask;
             PointTask = pointTask;
             Title = title;
             Description = description;
+            IdDegree = fkidtp;
         }
     }
 }

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DynamicData;
+using DynamicData.Alias;
+using Papply.Storage;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
-namespace PapplyAppli.Classes
+namespace Papply.Models
 {
     public class Degree
     {
@@ -12,26 +13,37 @@ namespace PapplyAppli.Classes
         public int IDDegree { get; set; } 
         public string TitreDegree { get; set; }
 
-        public List<Task> Tasks { get; set; }
+        public string DescDegree {  get; set; }
 
-        public double Total;
+        private readonly ReadOnlyObservableCollection<Models.Task> _tasks;
+        public ReadOnlyObservableCollection<Models.Task> Tasks => _tasks;
 
-        public Degree(int idDegree, string libDegree )
+        public DateTime test { get; set; }
+
+    public double Total;
+
+        public Degree(int idDegree, string libDegree)
         {
             IDDegree = idDegree;
             TitreDegree = libDegree;
-            Tasks = new List<Task>();
+            DescDegree = libDegree + " Description";
+            DataStorage.Tasks
+                .Connect()
+                .Where(t => t.IdDegree == this.IDDegree)
+                .Bind(out _tasks)
+                .Subscribe();
+            test = DateTime.Now;
         }
 
         public Degree()
         {
             IDDegree += 1;
-            TitreDegree += 1;
-            Tasks = new List<Task>();
+            TitreDegree += "Titre";
+            DescDegree += "Description";
+            DataStorage.Tasks
+                .Connect()
+                .Where(t=>t.IdDegree== this.IDDegree).Bind(out _tasks).Subscribe();
+            test = DateTime.Now;
         }
-
-
-
-
     }
 }
