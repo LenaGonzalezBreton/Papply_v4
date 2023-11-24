@@ -7,12 +7,12 @@ namespace Papply.Views.TP
 {
     public partial class CreateTP : UserControl
     {
-        Papply.Models.TP TPInstance { get; set; }
+        Papply.Models.Tp TPInstance { get; set; }
 
         public CreateTP()
         {
             InitializeComponent();
-            TPInstance = new Papply.Models.TP(1, "");
+            TPInstance = Tp.Create();
             CreateTPViewModel vm = new CreateTPViewModel(TPInstance);
             DataContext = vm;
         }
