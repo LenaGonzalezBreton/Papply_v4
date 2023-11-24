@@ -24,8 +24,9 @@ namespace Papply.Models
             IdDegree = 0;
         }
 
-        public Task(double pointTask, string title, string description,int fkidtp)
+        public Task(int idtask,double pointTask, string title, string description,int fkidtp)
         {
+            IDTask = idtask;
             PointTask = pointTask;
             Title = title;
             Description = description;
