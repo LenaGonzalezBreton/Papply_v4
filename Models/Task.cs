@@ -7,30 +7,19 @@ namespace Papply.Models
 {
     public class Task
     {
-        public int IDTask { get; set; }
+        public int IdTask { get; set; }
         public double PointTask { get;set;}
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public int IdDegree {  get; set; }
+        public string TitleTask { get; set; }
+        public string DescriptionTask { get; set; }
+        public int IdTp {  get; set; }
 
-        static Random index = new Random();
-
-        public Task()
+        public Task(int id,double point, string title, string description,int idTp)
         {
-            IDTask = index.Next(0,1000000000);
-            PointTask = 0;
-            Title = "Titre Sous Partie";
-            Description = "Description Sous Partie";
-            IdDegree = 0;
-        }
-
-        public Task(int idtask,double pointTask, string title, string description,int fkidtp)
-        {
-            IDTask = idtask;
-            PointTask = pointTask;
-            Title = title;
-            Description = description;
-            IdDegree = fkidtp;
+            IdTask = id;
+            PointTask = point;
+            TitleTask = title;
+            DescriptionTask = description;
+            IdTp = idTp;
         }
     }
 }

@@ -7,13 +7,13 @@ namespace Papply.Views.TP
 {
     public partial class CreateTP : UserControl
     {
-        Papply.Models.Degree DegreeInstance { get; set; }
+        Papply.Models.TP TPInstance { get; set; }
 
         public CreateTP()
         {
             InitializeComponent();
-            DegreeInstance = new Papply.Models.Degree(1, "");
-            CreateTPViewModel vm = new CreateTPViewModel(DegreeInstance);
+            TPInstance = new Papply.Models.TP(1, "");
+            CreateTPViewModel vm = new CreateTPViewModel(TPInstance);
             DataContext = vm;
         }
     }
