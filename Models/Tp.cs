@@ -10,7 +10,10 @@ namespace Papply.Models
     public class Tp
     {
         // attributs
-        public int IdTp { get; set; } 
+        public int IdTp { get; set; }
+        //GUID a la place de l'int
+
+
         public string TitreTp { get; set; }
         public string DescriptionTp {  get; set; }
 
@@ -37,10 +40,14 @@ namespace Papply.Models
 
         public static Models.Tp Create ()
         {
-            // Create id avec guid 
-
-            var id = 0; // à revoir
+            var id = 0;
             return new Tp(id, "", "");
         }
+        /*
+             Générer un Guid dans la création de TP
+            DataSource identificateur
+            Réadapte int en Guid
+             Création de TP avec les bonnes valeurs
+         */
     }
 }
