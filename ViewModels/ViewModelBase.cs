@@ -23,7 +23,7 @@ public class ViewModelBase{
 
     public ViewModelBase()
     {
-        DataStorage.TPS
+        DataStorage.Tps
             .Connect()
             .Bind(out _tps)
             .Subscribe();
