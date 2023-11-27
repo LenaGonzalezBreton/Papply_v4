@@ -7,19 +7,24 @@ namespace Papply.Models
 {
     public class Task
     {
-        public int IdTask { get; set; }
+        public string IdTask { get; set; }
         public double PointTask { get;set;}
         public string TitleTask { get; set; }
         public string DescriptionTask { get; set; }
-        public int IdTp {  get; set; }
+        public string IdTp {  get; set; }
 
-        public Task(int id,double point, string title, string description,int idTp)
+        public Task(string id,double point, string title, string description,string idTp)
         {
-            IdTask = id;
-            PointTask = point;
-            TitleTask = title;
-            DescriptionTask = description;
-            IdTp = idTp;
+            this.IdTask = id;
+            this.PointTask = point;
+            this.TitleTask = title;
+            this.DescriptionTask = description;
+            this.IdTp = idTp;
+        }
+        public static Models.Task Create() // Crée une Tache vide avec un GUID
+        {
+            var guid = Guid.NewGuid();
+            return new Task(guid.ToString(), 1,"", "", "");
         }
     }
 }

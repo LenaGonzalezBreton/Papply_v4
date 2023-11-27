@@ -4693,19 +4693,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jmeyer\\.nuget\\packages\\": {}
+    "C:\\Users\\lecoq\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj",
+      "projectUniqueName": "C:\\Users\\lecoq\\source\\repos\\Papply\\Papply.csproj",
       "projectName": "Papply",
-      "projectPath": "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj",
-      "packagesPath": "C:\\Users\\jmeyer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jmeyer\\source\\repos\\Papply\\obj\\",
+      "projectPath": "C:\\Users\\lecoq\\source\\repos\\Papply\\Papply.csproj",
+      "packagesPath": "C:\\Users\\lecoq\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lecoq\\source\\repos\\Papply\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jmeyer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lecoq\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4772,8 +4772,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\Users\\lecoq\\source\\repos\\Papply\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

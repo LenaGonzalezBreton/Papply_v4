@@ -1,4 +1,5 @@
-﻿using DynamicData;
+﻿using Avalonia.Controls;
+using DynamicData;
 using DynamicData.Alias;
 using Papply.Storage;
 using System;
@@ -10,7 +11,7 @@ namespace Papply.Models
     public class Tp
     {
         // attributs
-        public int IdTp { get; set; } 
+        public string IdTp { get; set; } 
         public string TitreTp { get; set; }
         public string DescriptionTp {  get; set; }
 
@@ -21,11 +22,11 @@ namespace Papply.Models
         public DateTime test { get; set; }
 
 
-        public Tp(int id, string titre, string description)
+        public Tp(string id, string titre, string description)
         {
-            IdTp = id;
-            TitreTp = titre;
-            DescriptionTp = description;
+            this.IdTp = id;
+            this.TitreTp = titre;
+            this.DescriptionTp = description;
 
             // Récupération des taches du tp
             DataStorage.Tasks
@@ -35,12 +36,10 @@ namespace Papply.Models
                 .Subscribe();
         }
 
-        public static Models.Tp Create ()
+        public static Models.Tp Create () // Crée un TP vide avec un GUID
         {
-            // Create id avec guid 
-
-            var id = 0; // à revoir
-            return new Tp(id, "", "");
+            var guid = Guid.NewGuid();
+            return new Tp(guid.ToString(), "", "");
         }
     }
 }

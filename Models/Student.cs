@@ -2,7 +2,9 @@
 {
     public class Student
     {
-        public int IdStudent;
-
+        public string IdStudent { get; set; }
+        public string NomStudent { get; set; }
+        public string PrenomStudent { get; set; }
+        public string IdPromotion { get; set; }
     }
 }
