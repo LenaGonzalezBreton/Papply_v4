@@ -4,6 +4,7 @@ using Papply.Storage;
 using System.Collections.ObjectModel;
 using DynamicData;
 using System;
+using System.Reactive.Concurrency;
 
 namespace Papply.ViewModels
 {
@@ -16,19 +17,21 @@ namespace Papply.ViewModels
 
 
 
-        public CreateTPViewModel(Models.Tp tp)
+        public CreateTPViewModel()
         {
             newTP = Tp.Create();
-            DataStorage.Tasks.AddOrUpdate(new Task(0,1, "Partie SQL", "Crée le script de BDD", newTP.IdTp));
+            string guid = Guid.NewGuid().ToString();
+            DataStorage.Tasks.AddOrUpdate(new Task(guid,1, "Partie SQL", "Crée le script de BDD", newTP.IdTp));
         }
 
         public void AddTask()
         {
-            var index = new Random();
-            Models.Task newTask = new Models.Task(index.Next(0,1000000),1,"Titre","Description",newTP.IdTp);
+            var newTask = Models.Task.Create();
+            newTask.IdTp = newTP.IdTp;
             DataStorage.Tasks.AddOrUpdate(newTask);
-            newTP.test = DateAndTime.Now;
 
+
+            newTP.test = DateAndTime.Now;
         }
     }
 }

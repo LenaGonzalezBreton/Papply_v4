@@ -12,8 +12,7 @@ namespace Papply.Views.TP
         public CreateTP()
         {
             InitializeComponent();
-            TPInstance = Tp.Create();
-            CreateTPViewModel vm = new CreateTPViewModel(TPInstance);
+            CreateTPViewModel vm = new CreateTPViewModel();
             DataContext = vm;
         }
     }

@@ -6,9 +6,9 @@ namespace Papply.Storage
 {
     static class DataStorage
     {
-        public static SourceCache<Models.Tp, int> Tps = new(t => t.IdTp);
-        public static SourceCache<Models.Promotion, int> Promotions = new(p => p.IDPromotion);
-        public static SourceCache<Models.Student, int> Students = new(s => s.IdStudent);
-        public static SourceCache<Models.Task, int> Tasks = new(t => t.IdTask);
+        public static SourceCache<Models.Tp, string> Tps = new(t => t.IdTp);
+        public static SourceCache<Models.Promotion, string> Promotions = new(p => p.IdPromotion);
+        public static SourceCache<Models.Student, string> Students = new(s => s.IdStudent);
+        public static SourceCache<Models.Task, string> Tasks = new(t => t.IdTask);
     }
 }
