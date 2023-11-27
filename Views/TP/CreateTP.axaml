@@ -15,16 +15,7 @@
 			</StackPanel>
 
 			<Label Margin="12,0,0,0" FontWeight="Bold" Foreground="#41448A">Création des Tâches</Label>
-				<Button FontWeight="Bold" Foreground="Black" Name="btn_addpart" Margin="15,0,15,15" Command="{Binding AddTask}" Background="White">Ajouter Partie</Button>
-			<StackPanel Orientation="Horizontal">
-				<Button FontWeight="Bold" Foreground="Black" Name="btn_suppart" Margin="15,0,15,15" Command="{Binding AddTask}" Background="White">Supprimer une Partie</Button>
-				
-
-				<ListBox ItemsSource="{Binding newTP.Tasks}" FlowDirection="LeftToRight"></ListBox>
-				<Label Content="{Binding newTP.test}"></Label>
-				
-			</StackPanel>
-
+				<Button FontWeight="Bold" Foreground="Black" Name="btn_addpart" Margin="15,0,15,15" Command="{Binding AddTask}" Background="White">Ajouter Partie</Button>				
 			<ScrollViewer HorizontalScrollBarVisibility="Auto">
 						<ItemsControl ItemsSource="{Binding newTP.Tasks}">
 							<ItemsControl.ItemsPanel>
@@ -39,7 +30,7 @@
 											<TextBlock Name="Titre" Foreground="Black" Text="Titre" FontWeight="Bold" FontSize="16"/>
 											<TextBox Name="title" Text="{Binding TitleTask,Mode=TwoWay}"></TextBox>
 											<TextBlock Text="Description" Foreground="Black" FontWeight="Bold" FontSize="16"/>
-											<TextBox Height="150" Name="desc" Text="{Binding DescriptionTask},Mode=TwoWay"></TextBox>
+											<TextBox Height="150" Name="desc" Text="{Binding IdTask},Mode=TwoWay"></TextBox>
 									
 											<StackPanel Orientation="Horizontal">
 												<StackPanel>

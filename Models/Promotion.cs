@@ -8,7 +8,7 @@ namespace Papply.Models
 {
     public class Promotion
     {
-        public int IDPromotion;
+        public string IdPromotion;
         public string NomPromotion;
     }
 }
