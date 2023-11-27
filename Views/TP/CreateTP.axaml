@@ -37,9 +37,9 @@
 									<Border Background="#FF3D00" CornerRadius="10" Padding="10" Margin="0,0,10,10">
 										<StackPanel Spacing="10">
 											<TextBlock Name="Titre" Foreground="Black" Text="Titre" FontWeight="Bold" FontSize="16"/>
-											<TextBox Name="title" Text="{Binding TitleTp,Mode=TwoWay}"></TextBox>
+											<TextBox Name="title" Text="{Binding TitleTask,Mode=TwoWay}"></TextBox>
 											<TextBlock Text="Description" Foreground="Black" FontWeight="Bold" FontSize="16"/>
-											<TextBox Height="150" Name="desc" Text="{Binding DescriptionTp},Mode=TwoWay"></TextBox>
+											<TextBox Height="150" Name="desc" Text="{Binding DescriptionTask},Mode=TwoWay"></TextBox>
 									
 											<StackPanel Orientation="Horizontal">
 												<StackPanel>
