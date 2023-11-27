@@ -1,4 +1,5 @@
-﻿using Papply.Models;
+﻿using DynamicData;
+using Papply.Models;
 using Papply.Storage;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace Papply.ViewModels
 {
     public class DashboardViewModel : ViewModelBase
     {
-        
+
     }
 }

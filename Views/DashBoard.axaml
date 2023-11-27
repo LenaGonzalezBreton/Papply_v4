@@ -13,7 +13,17 @@
 			<Border Grid.Column="0" Background="#9190CD" CornerRadius="10" Margin="10">
 				<StackPanel Orientation="Vertical">					
 					<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold" Margin="">TP en cours</Label>
-					
+					<Button Name="TestAddPromo" Click="Button_Click">Test AddPromo</Button>
+					<ItemsControl ItemsSource="{Binding Promotions}"> <!--Accéder aux données de Promotions-->
+						<ItemsControl.ItemTemplate> <!--Mise en page des données qui seront affichées-->
+							<DataTemplate>
+								<StackPanel Margin="5,5,5,5">
+									<Label Content="{Binding IdPromotion}"></Label>
+									<Label Content="{Binding NomPromotion}"></Label>
+								</StackPanel>
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+					</ItemsControl>
 				</StackPanel>
 			</Border>
 			<Border Grid.Column="2" Background="#FFFFFF" CornerRadius="10" Margin="10">
