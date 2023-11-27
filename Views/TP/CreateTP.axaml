@@ -42,6 +42,7 @@
 													<TextBlock FontWeight="Bold" Foreground="Black">NC</TextBlock>
 												</StackPanel>
 											</StackPanel>
+											<Button Command="{Binding SupTask}" CommandParameter="IdTask">Supprimer la Tâche</Button>
 										</StackPanel>
 									</Border>
 								</DataTemplate>
