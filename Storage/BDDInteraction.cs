@@ -3,6 +3,7 @@ using DynamicData;
 using Microsoft.Data.SqlClient;
 using Papply.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Papply.Storage
 {
@@ -22,10 +23,10 @@ namespace Papply.Storage
                 while(r.Read())
                 {
                     //Renseigner les colonnes ""
-                    string IdStudent = r.GetFieldValue<string>(r.GetOrdinal(""));
-                    string Nom = r.GetFieldValue<string>(r.GetOrdinal(""));
-                    string Prenom = r.GetFieldValue<string>(r.GetOrdinal(""));
-                    string IdPromotion = r.GetFieldValue<string>(r.GetOrdinal(""));
+                    string IdStudent = r.GetFieldValue<string>(r.GetOrdinal("IdStudent"));
+                    string Nom = r.GetFieldValue<string>(r.GetOrdinal("NomStudent"));
+                    string Prenom = r.GetFieldValue<string>(r.GetOrdinal("PrenomStudent"));
+                    string IdPromotion = r.GetFieldValue<string>(r.GetOrdinal("IdPromotion"));
 
 
                     // Utilisez les valeurs pour créer une instance 
@@ -38,6 +39,7 @@ namespace Papply.Storage
         public void ExtractPromo()
         {
             SqlCommand extraction = bdo.CreateCommand();
+            List<Student> students = new List<Student>();
             extraction.CommandText = "SELECT * FROM PROMOTION";
             extraction.ExecuteNonQuery();
             SqlDataReader r = extraction.ExecuteReader();
@@ -46,12 +48,25 @@ namespace Papply.Storage
                 while (r.Read())
                 {
                     //Renseigner les colonnes ""
-                    string IdPromotion = r.GetFieldValue<string>(r.GetOrdinal(""));
-                    string NomPromotion = r.GetFieldValue<string>(r.GetOrdinal(""));
-
-
+                    string IdPromotion = r.GetFieldValue<string>(r.GetOrdinal("IdPromotion"));
+                    string NomPromotion = r.GetFieldValue<string>(r.GetOrdinal("NomPromotion"));
+                    SqlCommand extraction_elevepromo = bdo.CreateCommand();
+                    extraction_elevepromo.CommandText = "SELECT * FROM STUDENT WHERE IdPromotion = '"+IdPromotion.ToString()+"';";
+                    extraction_elevepromo.ExecuteNonQuery();
+                    SqlDataReader releve = extraction_elevepromo.ExecuteReader();
+                    if(releve.HasRows)
+                    {
+                        while (releve.Read())
+                        {
+                            string IdStudent = releve.GetFieldValue <string>(r.GetOrdinal("IdStudent"));
+                            string NomStudent = releve.GetFieldValue<string>(r.GetOrdinal("NomStudent"));
+                            string PrenomStudent = releve.GetFieldValue<string>(r.GetOrdinal("PrenomStudent"));
+                            string FkIdPromotion = releve.GetFieldValue<string>(r.GetOrdinal("IdPromotion"));
+                            students.Add(new Student(IdStudent, NomStudent, PrenomStudent, FkIdPromotion));
+                        }
+                    }
                     // Utilisez les valeurs pour créer une instance
-                    Promotion ptoadd = new Promotion(IdPromotion,NomPromotion);
+                    Promotion ptoadd = new Promotion(IdPromotion,NomPromotion,students);
                     DataStorage.Promotions.AddOrUpdate(ptoadd);
                 }
             }
@@ -68,11 +83,11 @@ namespace Papply.Storage
                 while (r.Read())
                 {
                     //Renseigner les colonnes ""
-                    string IdTask = r.GetFieldValue<string>(r.GetOrdinal(""));
-                    double PointTask  = r.GetFieldValue<double>(r.GetOrdinal(""));
-                    string TitleTask = r.GetFieldValue<string>(r.GetOrdinal(""));
-                    string DescriptionTask = r.GetFieldValue<string>(r.GetOrdinal(""));
-                    string IdTp = r.GetFieldValue<string>(r.GetOrdinal(""));
+                    string IdTask = r.GetFieldValue<string>(r.GetOrdinal("IdTask"));
+                    double PointTask  = r.GetFieldValue<double>(r.GetOrdinal("PointTask"));
+                    string TitleTask = r.GetFieldValue<string>(r.GetOrdinal("TitleTask"));
+                    string DescriptionTask = r.GetFieldValue<string>(r.GetOrdinal("DescriptionTask"));
+                    string IdTp = r.GetFieldValue<string>(r.GetOrdinal("FkIdTp"));
 
 
                     // Utilisez les valeurs pour créer une instance
@@ -93,9 +108,9 @@ namespace Papply.Storage
                 while (r.Read())
                 {
                     //Renseigner les colonnes ""
-                    string IdTp = r.GetFieldValue<string>(r.GetOrdinal(""));
-                    string TitreTp = r.GetFieldValue<string>(r.GetOrdinal(""));
-                    string DescriptionTp = r.GetFieldValue<string>(r.GetOrdinal(""));
+                    string IdTp = r.GetFieldValue<string>(r.GetOrdinal("IdTp"));
+                    string TitreTp = r.GetFieldValue<string>(r.GetOrdinal("NomTp"));
+                    string DescriptionTp = r.GetFieldValue<string>(r.GetOrdinal("DescriptionTp"));
 
 
 
