@@ -232,10 +232,10 @@
           }
         }
       },
-      "Avalonia.ReactiveUI/11.0.5": {
+      "Avalonia.ReactiveUI/11.0.2": {
         "type": "package",
         "dependencies": {
-          "Avalonia": "11.0.5",
+          "Avalonia": "11.0.2",
           "ReactiveUI": "18.3.1",
           "System.Reactive": "5.0.0"
         },
@@ -1979,15 +1979,15 @@
         "runtimes/osx/native/libAvaloniaNative.dylib"
       ]
     },
-    "Avalonia.ReactiveUI/11.0.5": {
-      "sha512": "afgWhSQ6jW3ept/8VEc8jfjGMYkq0tf8LN3yKsC3VsjsU9u1+EnefrlV+7gf7MMIbFi9xb3MRrkEw4lLjG89WA==",
+    "Avalonia.ReactiveUI/11.0.2": {
+      "sha512": "LScjxo5TrdfwJqrPvcgn7bnrKu7dbJG5EJQaXRp/eg5q+Kw0RFJmp/hJeOor+Pzp09cYWPh2YzpqAfPFIP5ORw==",
       "type": "package",
-      "path": "avalonia.reactiveui/11.0.5",
+      "path": "avalonia.reactiveui/11.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.reactiveui.11.0.5.nupkg.sha512",
+        "avalonia.reactiveui.11.0.2.nupkg.sha512",
         "avalonia.reactiveui.nuspec",
         "lib/net6.0/Avalonia.ReactiveUI.dll",
         "lib/net6.0/Avalonia.ReactiveUI.xml",
@@ -4306,36 +4306,17 @@
       "Avalonia.Desktop >= 11.0.5",
       "Avalonia.Diagnostics >= 11.0.2",
       "Avalonia.Fonts.Inter >= 11.0.2",
-<<<<<<< HEAD
       "Avalonia.ReactiveUI >= 11.0.2",
-      "Avalonia.Themes.Fluent >= 11.0.2",
+      "Avalonia.Themes.Fluent >= 11.0.5",
       "Microsoft.Data.SqlClient >= 5.1.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jmeyer\\.nuget\\packages\\": {}
-=======
-      "Avalonia.ReactiveUI >= 11.0.5",
-      "Avalonia.Themes.Fluent >= 11.0.5"
-    ]
-  },
-  "packageFolders": {
     "C:\\Users\\Utilisateur\\.nuget\\packages\\": {}
->>>>>>> 626a877 (GestionTp.axaml Btn add promo btn classes btn tp)
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj",
-      "projectName": "Papply",
-      "projectPath": "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj",
-      "packagesPath": "C:\\Users\\jmeyer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jmeyer\\source\\repos\\Papply\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\jmeyer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
       "projectUniqueName": "C:\\Users\\Utilisateur\\RiderProjects\\Papply\\Papply.csproj",
       "projectName": "Papply",
       "projectPath": "C:\\Users\\Utilisateur\\RiderProjects\\Papply\\Papply.csproj",
@@ -4344,7 +4325,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 626a877 (GestionTp.axaml Btn add promo btn classes btn tp)
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4388,19 +4368,15 @@
           },
           "Avalonia.ReactiveUI": {
             "target": "Package",
-            "version": "[11.0.5, )"
+            "version": "[11.0.2, )"
           },
           "Avalonia.Themes.Fluent": {
             "target": "Package",
-<<<<<<< HEAD
-            "version": "[11.0.2, )"
+            "version": "[11.0.5, )"
           },
           "Microsoft.Data.SqlClient": {
             "target": "Package",
             "version": "[5.1.2, )"
-=======
-            "version": "[11.0.5, )"
->>>>>>> 626a877 (GestionTp.axaml Btn add promo btn classes btn tp)
           }
         },
         "imports": [
@@ -4419,11 +4395,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
-=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
->>>>>>> 626a877 (GestionTp.axaml Btn add promo btn classes btn tp)
       }
     }
   }
