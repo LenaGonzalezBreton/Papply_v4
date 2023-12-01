@@ -13,6 +13,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Papply
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\jmeyer\source\repos\Papply\
 
 [C:/Users/jmeyer/source/repos/Papply/App.axaml]
@@ -28,4 +29,21 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/jmeyer/source/repos/Papply/Views/TP/GestionTp.axaml]
+=======
+build_property.ProjectDir = C:\Users\Utilisateur\RiderProjects\Papply\
+
+[C:/Users/Utilisateur/RiderProjects/Papply/App.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Utilisateur/RiderProjects/Papply/Views/DashBoard.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Utilisateur/RiderProjects/Papply/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Utilisateur/RiderProjects/Papply/Views/TP/CreateTP.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Utilisateur/RiderProjects/Papply/Views/TP/GestionTp.axaml]
+>>>>>>> 626a877 (GestionTp.axaml Btn add promo btn classes btn tp)
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

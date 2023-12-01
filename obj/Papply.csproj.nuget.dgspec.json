@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jmeyer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\Utilisateur\\RiderProjects\\Papply\\Papply.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Utilisateur\\RiderProjects\\Papply\\Papply.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Utilisateur\\RiderProjects\\Papply\\Papply.csproj",
+        "projectName": "Papply",
+        "projectPath": "C:\\Users\\Utilisateur\\RiderProjects\\Papply\\Papply.csproj",
+        "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Utilisateur\\RiderProjects\\Papply\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 626a877 (GestionTp.axaml Btn add promo btn classes btn tp)
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,11 +59,11 @@
           "dependencies": {
             "Avalonia": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.0.5, )"
             },
             "Avalonia.Desktop": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.0.5, )"
             },
             "Avalonia.Diagnostics": {
               "target": "Package",
@@ -58,15 +75,19 @@
             },
             "Avalonia.ReactiveUI": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.0.5, )"
             },
             "Avalonia.Themes.Fluent": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[11.0.2, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.1.2, )"
+=======
+              "version": "[11.0.5, )"
+>>>>>>> 626a877 (GestionTp.axaml Btn add promo btn classes btn tp)
             }
           },
           "imports": [
@@ -85,7 +106,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+>>>>>>> 626a877 (GestionTp.axaml Btn add promo btn classes btn tp)
         }
       }
     }

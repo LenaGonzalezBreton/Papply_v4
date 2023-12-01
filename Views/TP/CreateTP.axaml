@@ -1,55 +1,58 @@
+
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 xmlns:local="clr-namespace:Papply.ViewModels;assembly=Papply"
+             xmlns:local="clr-namespace:Papply.ViewModels;assembly=Papply"
+             xmlns:card="clr-namespace:Papply.Models;assembly=Papply"
              mc:Ignorable="d" d:DesignWidth="1300" d:DesignHeight="800"
              x:Class="Papply.Views.TP.CreateTP"
-			 x:DataType="local:CreateTPViewModel"
-			 >
+             x:DataType="local:CreateTPViewModel"
+>
 	
 		<StackPanel Spacing="15" Background="LightGray">
 			<StackPanel Orientation="Vertical">
 				<TextBlock FontWeight="Bold" Margin="12" Foreground="#41448A" >Nom du TP</TextBlock>
-				<TextBox Width="170" HorizontalAlignment="Left" Margin="10,5,0,0" Foreground="White" Text="Nom du TP"></TextBox>
+				<TextBox Width="170" HorizontalAlignment="Left" Margin="10,5,0,0" Background="White"></TextBox>
 			</StackPanel>
 
 			<Label Margin="12,0,0,0" FontWeight="Bold" Foreground="#41448A">Création des Tâches</Label>
-				<Button FontWeight="Bold" Foreground="Black" Name="btn_addpart" Margin="15,0,15,15" Command="{Binding AddTask}" Background="White">Ajouter Partie</Button>				
+			<Button FontWeight="Bold" Foreground="Black" Name="btn_addpart" Margin="15,0,15,15" Command="{Binding AddTask}" Background="White">Ajouter Partie</Button>
 			<ScrollViewer HorizontalScrollBarVisibility="Auto">
-						<ItemsControl ItemsSource="{Binding newTP.Tasks}">
-							<ItemsControl.ItemsPanel>
-								<ItemsPanelTemplate>
-									<WrapPanel Orientation="Horizontal"/>
-								</ItemsPanelTemplate>
-							</ItemsControl.ItemsPanel>
-							<ItemsControl.ItemTemplate>
-								<DataTemplate>
-									<Border Background="#FF3D00" CornerRadius="10" Padding="10" Margin="0,0,10,10">
-										<StackPanel Spacing="10">
-											<TextBlock Name="Titre" Foreground="Black" Text="Titre" FontWeight="Bold" FontSize="16"/>
-											<TextBox Name="title" Text="{Binding TitleTask,Mode=TwoWay}"></TextBox>
-											<TextBlock Text="Description" Foreground="Black" FontWeight="Bold" FontSize="16"/>
-											<TextBox Height="150" Name="desc" Text="{Binding IdTask},Mode=TwoWay"></TextBox>
+				<ItemsControl ItemsSource="{Binding Tasks}">
+					
+					<ItemsControl.ItemsPanel>
+						<ItemsPanelTemplate>
+							<WrapPanel Orientation="Horizontal"/>
+						</ItemsPanelTemplate>
+					</ItemsControl.ItemsPanel>
+					
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<Border Background="#FF3D00" CornerRadius="10" Padding="10" Margin="0,0,10,10">
+								<StackPanel Spacing="10">
+									<TextBlock Name="Titre" Foreground="Black" Text="Titre" FontWeight="Bold" FontSize="16"/>
+									<TextBox Name="title" Text="{Binding TitleTask,Mode=TwoWay}"></TextBox>
+									<TextBlock Text="Description" Foreground="Black" FontWeight="Bold" FontSize="16"/>
+									<TextBox Height="150" Name="desc" Text="{Binding DescriptionTask,Mode=TwoWay}"></TextBox>
 									
-											<StackPanel Orientation="Horizontal">
-												<StackPanel>
-													<NumericUpDown Minimum="0" FontWeight="Bold" Background="LightGray" Name="point" Value="{Binding PointTask,Mode=TwoWay}" Width="120" HorizontalAlignment="Left" Foreground="Black"></NumericUpDown>
-													<Label Foreground="Black" VerticalAlignment="Bottom" FontWeight="Bold" HorizontalAlignment="Left" Content="NbPoint"/>
-												</StackPanel>
-
-												<StackPanel Margin="48,0,0,0" VerticalAlignment="Center">
-													<TextBlock FontWeight="Bold" Foreground="Black">NC</TextBlock>
-												</StackPanel>
-											</StackPanel>
-											<Button Command="{Binding SupTask}">Supprimer la Tâche</Button>
+									<StackPanel Orientation="Horizontal">
+										<StackPanel>
+											<NumericUpDown Minimum="0" FontWeight="Bold" Background="LightGray" Name="point" Value="{Binding PointTask,Mode=TwoWay}" Width="120" HorizontalAlignment="Left" Foreground="Black"></NumericUpDown>
+											<Label Foreground="Black" VerticalAlignment="Bottom" FontWeight="Bold" HorizontalAlignment="Left" Content="NbPoint"/>
 										</StackPanel>
-									</Border>
-								</DataTemplate>
-							</ItemsControl.ItemTemplate>
-						</ItemsControl>
-					</ScrollViewer>
-				<Button Margin="5">Sauvegarder</Button>
+
+										<StackPanel Margin="48,0,0,0" VerticalAlignment="Center">
+											<TextBlock FontWeight="Bold" Foreground="Black">NC</TextBlock>
+										</StackPanel>
+									</StackPanel>
+								</StackPanel>
+							</Border>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+			</ScrollViewer>
+
 		</StackPanel>
 </UserControl>
 
