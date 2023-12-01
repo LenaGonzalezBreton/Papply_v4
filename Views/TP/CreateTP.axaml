@@ -11,7 +11,7 @@
 		<StackPanel Spacing="15" Background="LightGray">
 			<StackPanel Orientation="Vertical">
 				<TextBlock FontWeight="Bold" Margin="12" Foreground="#41448A" >Nom du TP</TextBlock>
-				<TextBox Width="170" HorizontalAlignment="Left" Margin="10,5,0,0" Background="White"></TextBox>
+				<TextBox Width="170" HorizontalAlignment="Left" Margin="10,5,0,0" Foreground="White" Text="Nom du TP"></TextBox>
 			</StackPanel>
 
 			<Label Margin="12,0,0,0" FontWeight="Bold" Foreground="#41448A">Création des Tâches</Label>
@@ -42,7 +42,7 @@
 													<TextBlock FontWeight="Bold" Foreground="Black">NC</TextBlock>
 												</StackPanel>
 											</StackPanel>
-											<Button Command="{Binding SupTask}" CommandParameter="IdTask">Supprimer la Tâche</Button>
+											<Button Command="{Binding SupTask}">Supprimer la Tâche</Button>
 										</StackPanel>
 									</Border>
 								</DataTemplate>

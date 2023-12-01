@@ -30,7 +30,6 @@ namespace Papply.ViewModels
             newTask.IdTp = newTP.IdTp;
             DataStorage.Tasks.AddOrUpdate(newTask);
 
-
             newTP.test = DateAndTime.Now;
         }
     }

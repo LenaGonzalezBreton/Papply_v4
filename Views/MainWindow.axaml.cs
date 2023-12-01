@@ -13,7 +13,7 @@ public partial class MainWindow : Window
 
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
-        MainContent.Content = new CreateTP();
+
     }
     private void btn_dashboard_Click(object sender, RoutedEventArgs e)
     {

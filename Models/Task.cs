@@ -1,4 +1,6 @@
-﻿using Papply.ViewModels;
+﻿using DynamicData;
+using Papply.Storage;
+using Papply.ViewModels;
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -25,6 +27,11 @@ namespace Papply.Models
         {
             var guid = Guid.NewGuid();
             return new Task(guid.ToString(), 1,"", "", "");
+        }
+
+        public void SupTask()
+        {
+            DataStorage.Tasks.Remove(this);
         }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lecoq\\source\\repos\\Papply\\Papply.csproj": {}
+    "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lecoq\\source\\repos\\Papply\\Papply.csproj": {
+    "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lecoq\\source\\repos\\Papply\\Papply.csproj",
+        "projectUniqueName": "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj",
         "projectName": "Papply",
-        "projectPath": "C:\\Users\\lecoq\\source\\repos\\Papply\\Papply.csproj",
-        "packagesPath": "C:\\Users\\lecoq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lecoq\\source\\repos\\Papply\\obj\\",
+        "projectPath": "C:\\Users\\jmeyer\\source\\repos\\Papply\\Papply.csproj",
+        "packagesPath": "C:\\Users\\jmeyer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jmeyer\\source\\repos\\Papply\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lecoq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jmeyer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,6 +63,10 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.0.2, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.2, )"
             }
           },
           "imports": [
@@ -81,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

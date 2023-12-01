@@ -10,5 +10,11 @@ namespace Papply.Models
     {
         public string IdPromotion;
         public string NomPromotion;
+    
+        public Promotion(string IdPromotion, string NomPromotion) 
+        {
+            this.IdPromotion = IdPromotion;
+            this.NomPromotion = NomPromotion;
+        }
     }
 }
