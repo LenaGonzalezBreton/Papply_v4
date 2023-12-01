@@ -11,8 +11,6 @@ namespace Papply.ViewModels
 
     public class CreateTPViewModel : ViewModelBase
     {
-        public ObservableCollection<string> ListPromo { get; set; }
-        //public ObservableCollection<string> Task_Titles { get; set; }
         public Tp newTP { get; }
 
 
@@ -29,8 +27,11 @@ namespace Papply.ViewModels
             var newTask = Models.Task.Create();
             newTask.IdTp = newTP.IdTp;
             DataStorage.Tasks.AddOrUpdate(newTask);
+        }
 
-            newTP.test = DateAndTime.Now;
+        public void SaveTp()
+        {
+            DataStorage.Tps.AddOrUpdate(newTP);
         }
     }
 }
