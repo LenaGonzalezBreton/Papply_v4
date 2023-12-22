@@ -1,0 +1,110 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Papply.ViewModels;assembly=Papply"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Papply.Views.ListeEleves"
+             x:DataType="local:ListeElevesViewModel">
+    <Panel>
+        <StackPanel Background="#D9D9D9">
+            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF3D00" FontSize="48"
+                   FontWeight="Bold">
+                Liste Elèves
+            </Label>
+            <StackPanel Margin="0,30,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Name="editableComboBox" Width="350" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Foreground="#41448A" Watermark="Rechercher un élève" CornerRadius="20" Background="White" BorderBrush="#41448A" BorderThickness="2" FontSize="15"  />
+               
+                <ComboBox Grid.Column="1" Background="#41448A" FontSize="15" HorizontalContentAlignment="Center" HorizontalAlignment="Center"
+                          CornerRadius="20" PlaceholderText="Promotion" Width="170"
+                          ItemsSource="{Binding Promotions}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding NomPromotion}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Background="#9190CD" Margin="30">
+                <Label>Liste des élèves</Label>
+                <StackPanel>
+                    <DataGrid Name="ListeEleve" Margin="20" ItemsSource="{Binding Students}" GridLinesVisibility="All"
+                              BorderThickness="1" BorderBrush="#41448A">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nom" Binding="{Binding NomStudent}" />
+                            <DataGridTextColumn Header="Prénom" Binding="{Binding PrenomStudent}" />
+                            <DataGridTextColumn Header="Identifiant" Binding="{Binding IdStudent}" />
+                            <DataGridTextColumn Header="Promotion" Binding="{Binding IdPromotion}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </StackPanel>
+
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*" />
+                    
+                </Grid.ColumnDefinitions>
+                
+                
+                <Button Name="btn_add" Click="Btn_add_OnClick" Grid.Column="0" Background="#41448A" FontWeight="Bold" FontSize="15"
+                        HorizontalContentAlignment="Center"
+                        CornerRadius="20" Width="170" HorizontalAlignment="Center">
+                    Ajouter
+                </Button>
+
+                <Button Name="btn_del" Grid.Column="1" Background="#41448A" FontWeight="Bold" FontSize="15"
+                        HorizontalContentAlignment="Center"
+                        CornerRadius="20" Width="170" HorizontalAlignment="Center">
+                    Supprimer
+                </Button>
+            </Grid>
+        </StackPanel>
+        
+          <Grid ZIndex="2" Name="FormAddEleve" IsVisible="False" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Center" >
+              
+                  <StackPanel Margin="20" HorizontalAlignment="Center">
+                      <TextBlock Margin="0 5" Foreground="#41448A">Nom</TextBlock>
+                      <TextBox Name="tbxNom" FontWeight="Bold" FontSize="15" CornerRadius="20" BorderBrush="#41448A" BorderThickness="3"
+                               HorizontalContentAlignment="Center" Background="White" Watermark="Entrer le nom de l'élève" Foreground="#41448A"/>
+                      
+                      <TextBlock Margin="0 5" Foreground="#41448A">Prénom</TextBlock>
+                      <TextBox Name="tbxPrenom" FontWeight="Bold" FontSize="15" CornerRadius="20" BorderBrush="#41448A" BorderThickness="3"
+                               HorizontalContentAlignment="Center" Background="White"  Watermark="Entrer le prénom de l'élève" Foreground="#41448A"/>
+                      
+                      <TextBlock Margin="0 5" Foreground="#41448A">Identifiant</TextBlock>
+                      <TextBox FontWeight="Bold" FontSize="15" CornerRadius="20" BorderBrush="#41448A" BorderThickness="3"
+                               HorizontalContentAlignment="Center" Background="White" Watermark="Entrer l'identifiant" Foreground="#41448A"/>
+                      
+                      <TextBlock Margin="0 5" Foreground="#41448A">Mot de passe provisoire:</TextBlock>
+                      <TextBox  FontWeight="Bold" FontSize="15" CornerRadius="20" BorderBrush="#41448A" BorderThickness="3"
+                               HorizontalContentAlignment="Center" Background="White" PasswordChar="*" Watermark="Entrer le mot de passe" Foreground="#41448A"/>
+                      
+                      <StackPanel Margin="0 5 ">
+                          <TextBlock Margin="0 5" Foreground="#41448A">Choix promotion</TextBlock>
+                          <ComboBox Background="#41448A" FontWeight="Bold" FontSize="12" HorizontalContentAlignment="Center"
+                                    CornerRadius="20" PlaceholderText="Promotion" Width="120"
+                                    ItemsSource="{Binding Promotions}">
+                          <ComboBox.ItemTemplate>
+                              <DataTemplate>
+                                  <Label Content="{Binding NomPromotion}"/>
+                              </DataTemplate>
+                          </ComboBox.ItemTemplate>
+                      </ComboBox>
+                      </StackPanel>
+                      
+                      <StackPanel Margin="0 30 0 0" HorizontalAlignment="Center">
+                          <Button Name="btnValider" Background="#41448A" CornerRadius="20" FontWeight="Bold" FontSize="15" Click="BtnValider_OnClick">Valider</Button>
+                      </StackPanel>
+                  </StackPanel>
+          </Grid>
+    </Panel>
+</UserControl>

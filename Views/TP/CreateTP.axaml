@@ -30,7 +30,7 @@
 											<TextBlock Name="Titre" Foreground="Black" Text="Titre" FontWeight="Bold" FontSize="16"/>
 											<TextBox Name="title" Text="{Binding TitleTask,Mode=TwoWay}"></TextBox>
 											<TextBlock Text="Description" Foreground="Black" FontWeight="Bold" FontSize="16"/>
-											<TextBox Height="150" Name="desc" Text="{Binding DescriptionTask},Mode=TwoWay"></TextBox>
+											<TextBox Height="150" Name="desc" Text="{Binding DescriptionTask,Mode=TwoWay}"></TextBox>
 									
 											<StackPanel Orientation="Horizontal">
 												<StackPanel>
@@ -52,4 +52,3 @@
 				<Button Margin="5" Command="{Binding SaveTp}">Sauvegarder</Button>
 		</StackPanel>
 </UserControl>
-

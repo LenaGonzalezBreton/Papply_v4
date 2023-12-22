@@ -19,7 +19,7 @@ namespace Papply.ViewModels
         {
             newTP = Tp.Create();
             string guid = Guid.NewGuid().ToString();
-            DataStorage.Tasks.AddOrUpdate(new Task(guid,1, "Partie SQL", "Crée le script de BDD", newTP.IdTp));
+            DataStorage.Tasks.AddOrUpdate(new Task(guid, 1, "Partie SQL", "Crée le script de BDD", newTP.IdTp));
         }
 
         public void AddTask()

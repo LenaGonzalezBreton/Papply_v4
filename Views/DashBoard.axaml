@@ -12,7 +12,7 @@
 		<Grid ColumnDefinitions="1* 2*">
 			<Border Grid.Column="0" Background="#9190CD" CornerRadius="10" Margin="10">
 				<StackPanel Orientation="Vertical">					
-					<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold" Margin="">TP en cours</Label>
+					<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold">TP en cours</Label>
 					<Button Name="TestAddPromo" Click="Button_Click">Test AddPromo</Button>
 					<ItemsControl ItemsSource="{Binding Promotions}"> <!--Accéder aux données de Promotions-->
 						<ItemsControl.ItemTemplate> <!--Mise en page des données qui seront affichées-->
@@ -30,16 +30,16 @@
 				<Grid ColumnDefinitions="* *">
 
 					<StackPanel Grid.Column="0" Orientation="Vertical" Margin="10">
-						<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold" Margin="">Élève en difficulté</Label>
+						<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold">Élève en difficulté</Label>
 						<Border Background="#191C58" CornerRadius="10">
-							<Label HorizontalAlignment="Center" Foreground="#FFFFFF" FontWeight="Bold" Margin="">Nom de l'élève</Label>
+							<Label HorizontalAlignment="Center" Foreground="#FFFFFF" FontWeight="Bold">Nom de l'élève</Label>
 						</Border>
 					</StackPanel>
 
 					<StackPanel Grid.Column="1" Orientation="Vertical" Margin="10">
-						<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold" Margin="">Élève ayant terminé</Label>
+						<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold">Élève ayant terminé</Label>
 						<Border Background="#191C58" CornerRadius="10">
-							<Label HorizontalAlignment="Center" Foreground="#FFFFFF" FontWeight="Bold" Margin="">Nom de l'élève</Label>
+							<Label HorizontalAlignment="Center" Foreground="#FFFFFF" FontWeight="Bold">Nom de l'élève</Label>
 						</Border>
 					</StackPanel>
 

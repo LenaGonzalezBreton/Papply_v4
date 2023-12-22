@@ -1,4 +1,5 @@
 ﻿
+using System;
 using DynamicData;
 using Microsoft.Data.SqlClient;
 using Papply.Models;
@@ -66,7 +67,7 @@ namespace Papply.Storage
                         }
                     }
                     // Utilisez les valeurs pour créer une instance
-                    Promotion ptoadd = new Promotion(IdPromotion,NomPromotion,students);
+                    Promotion ptoadd = new Promotion(IdPromotion,NomPromotion,students,new Tp(IdPromotion, "aze", "aze"));
                     DataStorage.Promotions.AddOrUpdate(ptoadd);
                 }
             }

@@ -23,8 +23,8 @@
 					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_dashboard" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_dashboard_Click" Margin="8,8,8,2" Height="32" Width="112">DashBoard</Button>
 					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_create" VerticalAlignment="Top" HorizontalContentAlignment="Center" Margin="8,8,8,2" Height="32" Width="112" Click="btn_create_Click">Création TP</Button>
 					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_manage" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_manage_Click" Margin="8,8,8,2" Height="32" Width="112">Gestion TP</Button>
-					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_historique" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_manage_Click" Margin="8,8,8,2" Height="32" Width="112">Historique TP</Button>
-					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_list" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_manage_Click" Margin="8,8,8,2" Height="32" Width="112">Liste Elèves</Button>
+					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_historique" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_historique_Click" Margin="8,8,8,2" Height="32" Width="112">Historique TP</Button>
+					<Button Foreground="White" FontStyle="Normal" FontWeight="Bold" Name="btn_list" VerticalAlignment="Top" HorizontalContentAlignment="Center" Click="btn_list_Click" Margin="8,8,8,2" Height="32" Width="112">Liste Elèves</Button>
 				</StackPanel>
 			</UserControl>
 

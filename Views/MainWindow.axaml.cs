@@ -1,6 +1,8 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Papply.Views.TP;
+using Papply.Storage;
+using Papply.ViewModels;
 
 namespace Papply.Views;
 
@@ -32,5 +34,14 @@ public partial class MainWindow : Window
     private void btn_manage_Click(object sender, RoutedEventArgs e)
     {
         ChangeContent(new GestionTp());
+    }
+
+    private void btn_list_Click(object sender, RoutedEventArgs e)
+    {
+        ChangeContent(new ListeEleves());
+    }
+    private void btn_historique_Click(object sender, RoutedEventArgs e)
+    {
+        ChangeContent(new HistoriqueTp());
     }
 }
