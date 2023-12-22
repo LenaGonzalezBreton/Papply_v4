@@ -52,4 +52,3 @@
 				<Button Margin="5" Command="{Binding SaveTp}">Sauvegarder</Button>
 		</StackPanel>
 </UserControl>
-
