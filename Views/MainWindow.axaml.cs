@@ -13,9 +13,12 @@ public partial class MainWindow : Window
 
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
-        MainContent.Content = new CreateTP();
-    }
 
+    }
+    private void btn_dashboard_Click(object sender, RoutedEventArgs e)
+    {
+        ChangeContent(new DashBoard());
+    }
     private void ChangeContent(UserControl newContent)
     {
         MainContent.Content = newContent;
@@ -30,5 +33,4 @@ public partial class MainWindow : Window
     {
         ChangeContent(new GestionTp());
     }
-
 }

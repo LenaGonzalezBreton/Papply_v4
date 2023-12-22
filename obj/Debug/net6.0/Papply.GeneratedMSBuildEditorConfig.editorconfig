@@ -18,7 +18,7 @@ build_property.ProjectDir = C:\Users\jmeyer\source\repos\Papply\
 [C:/Users/jmeyer/source/repos/Papply/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/jmeyer/source/repos/Papply/Models/CardControl.axaml]
+[C:/Users/jmeyer/source/repos/Papply/Views/DashBoard.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/jmeyer/source/repos/Papply/Views/MainWindow.axaml]

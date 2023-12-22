@@ -1,32 +1,19 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Papply.ViewModels;
+using Papply.Models;
 
 namespace Papply.Views.TP
 {
     public partial class CreateTP : UserControl
     {
-        PapplyAppli.Classes.Degree DegreeInstance { get; set; }
+        private Models.Tp TPInstance { get; set; }
 
         public CreateTP()
         {
             InitializeComponent();
-            DegreeInstance = new PapplyAppli.Classes.Degree(1, "");
-            CreateTPViewModel vm = new CreateTPViewModel(DegreeInstance);
+            CreateTPViewModel vm = new CreateTPViewModel();
             DataContext = vm;
-        }
-
-        private void btn_addpart_Click(object sender, RoutedEventArgs e)
-        {
-            /* PARTIE SANS LIAISON DE DONNEES
-            var cardControl = new Papply.Models.CardControl();
-            pan_part.Children.Add(cardControl);
-            */
-        }
-
-        private void btn_addspart_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

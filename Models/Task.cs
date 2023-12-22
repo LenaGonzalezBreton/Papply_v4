@@ -1,68 +1,37 @@
-﻿using Papply.ViewModels;
+﻿using DynamicData;
+using Papply.Storage;
+using Papply.ViewModels;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace Papply.Models
 {
-    public class Task : ViewModelBase
+    public class Task
     {
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public string IdTask { get; set; }
+        public double PointTask { get;set;}
+        public string TitleTask { get; set; }
+        public string DescriptionTask { get; set; }
+        public string IdTp {  get; set; }
 
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        public Task(string id,double point, string title, string description,string idTp)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            this.IdTask = id;
+            this.PointTask = point;
+            this.TitleTask = title;
+            this.DescriptionTask = description;
+            this.IdTp = idTp;
+        }
+        public static Models.Task Create() // Crée une Tache vide avec un GUID
+        {
+            var guid = Guid.NewGuid();
+            return new Task(guid.ToString(), 1,"", "", "");
         }
 
-        private double _pointtask;
-        public double PointTask
+        public void SupTask()
         {
-            get { return _pointtask; }
-            set
-            {
-                if (_pointtask != value)
-                {
-                    _pointtask = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
-        private string _title;
-        public string Title
-        {
-            get { return _title; }
-            set
-            {
-                if (_title != value)
-                {
-                    _title = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
-        private string _desc;
-        public string Description
-        {
-            get { return _desc; }
-            set
-            {
-                if (_desc != value)
-                {
-                    _desc = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-
-        public CardControl card { get; set; }
-
-        public Task()
-        {
-            PointTask = 0;
-            Title = "Titre";
-            Description = string.Empty;
-            card = new CardControl(0);
+            DataStorage.Tasks.Remove(this);
         }
     }
 }

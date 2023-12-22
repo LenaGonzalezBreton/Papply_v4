@@ -1,52 +1,37 @@
-﻿using Papply.Models;
-using PapplyAppli.Classes;
+﻿using Microsoft.VisualBasic;
+using Papply.Models;
+using Papply.Storage;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using Task = Papply.Models.Task;
+using DynamicData;
+using System;
+using System.Reactive.Concurrency;
 
 namespace Papply.ViewModels
 {
-    public class CreateTPViewModel
+
+    public class CreateTPViewModel : ViewModelBase
     {
-        public ObservableCollection<GroupTask> GroupTasks { get; set; }
-        public ObservableCollection<CardControl> PartCards { get; set; }
+        public Tp newTP { get; }
 
-        public ObservableCollection<CardControl> SPartCards {  get; set; }
 
-        public int index = 0;
 
-        public CreateTPViewModel(Degree TP)
+        public CreateTPViewModel()
         {
-            GroupTasks = new ObservableCollection<GroupTask>(TP._gtaskList);
-            PartCards = new ObservableCollection<CardControl>();
-            SPartCards = new ObservableCollection<CardControl>();
-            foreach(GroupTask g in TP._gtaskList)
-            {
-                PartCards.Add(g._partcard);
-                foreach(Task t in g._listtask)
-                {
-                    SPartCards.Add(t.card);
-                }
-            }
+            newTP = Tp.Create();
+            string guid = Guid.NewGuid().ToString();
+            DataStorage.Tasks.AddOrUpdate(new Task(guid,1, "Partie SQL", "Crée le script de BDD", newTP.IdTp));
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        public void AddTask()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            var newTask = Models.Task.Create();
+            newTask.IdTp = newTP.IdTp;
+            DataStorage.Tasks.AddOrUpdate(newTask);
         }
 
-        private GroupTask selectedPart;
-        public GroupTask SelectedPart { 
-            get {
-                return GroupTasks[index]; 
-            } 
-            set {
-                selectedPart = value;
-                OnPropertyChanged();
-            }
+        public void SaveTp()
+        {
+            DataStorage.Tps.AddOrUpdate(newTP);
         }
     }
 }
