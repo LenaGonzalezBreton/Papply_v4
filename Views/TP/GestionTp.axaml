@@ -28,16 +28,22 @@
             <ComboBox Background="White" FontWeight="Bold" FontSize="15" CornerRadius="20"
                       HorizontalContentAlignment="Center" PlaceholderText="Rechercher TP"
                       PlaceholderForeground="#41448A" BorderBrush="#41448A" BorderThickness="3" Width="350"
-                      ItemsSource="{Binding Tps}">
+                      ItemsSource="{Binding Promotions}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
-                        <Label Content="{Binding TitreTp}"/>
+                        <Label Content="{Binding TravauxPratiques.TitreTp}"/>
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
+            
         </StackPanel>
-        <StackPanel>
-           
-        </StackPanel>
+        
+            <StackPanel Margin="20">
+                <ProgressBar  Margin="0 10" Height="20"
+                              Minimum="0" Maximum="100" Value="92"
+                              Foreground="#41448A"
+                              ShowProgressText="True"/>
+            </StackPanel>
+        
     </StackPanel>
 </UserControl>

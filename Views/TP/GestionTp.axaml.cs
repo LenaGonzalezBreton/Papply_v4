@@ -22,9 +22,17 @@ public partial class GestionTp : UserControl
     //}
     private void AddPromo(object? sender, RoutedEventArgs e)
     {
-        var promotion = Promotion.Create();
-        promotion.NomPromotion = "wesh";
-        DataStorage.Promotions.AddOrUpdate(promotion);
+        for (int i = 0; i < 5; i++)
+        {
+            
+            var promotion = Promotion.Create();
+            promotion.NomPromotion = "classe " + i;
+            promotion.TravauxPratiques = new Tp(i.ToString(), "Tp " + i, "description");
+            DataStorage.Promotions.AddOrUpdate(promotion);
+            
+        }
+        
+        
         //throw new System.NotImplementedException();
     }
     

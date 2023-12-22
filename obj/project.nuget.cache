@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SFQ+GaM6YvUY0aAr0agy3sRt1JDawSRzHK78cGMWcKnUm6qOQIRGRWpdqpmOIfKZhJV5MTAEMouimwytlvzk7Q==",
+  "dgSpecHash": "HXUj63cMYxSyKzfKB0rY7AERLH8zERYbVa1HeSS5xDs/PstdDyZ2rkngSKYLSXMWIDKhI9mhv9OOLlBuBx0/sQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Utilisateur\\RiderProjects\\Papply\\Papply.csproj",
+  "projectFilePath": "C:\\Users\\Utilisateur\\RiderProjects\\Papply-old\\Papply.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Utilisateur\\.nuget\\packages\\avalonia\\11.0.5\\avalonia.11.0.5.nupkg.sha512",
     "C:\\Users\\Utilisateur\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.0.2023020321\\avalonia.angle.windows.natives.2.1.0.2023020321.nupkg.sha512",
@@ -87,5 +87,12 @@
     "C:\\Users\\Utilisateur\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Utilisateur\\.nuget\\packages\\tmds.dbus.protocol\\0.15.0\\tmds.dbus.protocol.0.15.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Utilisateur\\RiderProjects\\Papply-old\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

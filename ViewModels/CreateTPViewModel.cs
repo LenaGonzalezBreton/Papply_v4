@@ -32,5 +32,9 @@ namespace Papply.ViewModels
 
             newTP.test = DateAndTime.Now;
         }
+        public void SaveTp()
+        {
+            DataStorage.Tps.AddOrUpdate(newTP);
+        }
     }
 }

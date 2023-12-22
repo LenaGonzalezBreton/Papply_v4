@@ -3,29 +3,43 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" Background="#D9D9D9"
-             x:Class="Papply.Views.DashBoard">
+             x:Class="Papply.Views.DashBoard"
+			 xmlns:vm="using:Papply.ViewModels"
+			 x:DataType="vm:DashboardViewModel"
+			 >
 
 	<StackPanel Orientation="Vertical">
 		<Grid ColumnDefinitions="1* 2*">
 			<Border Grid.Column="0" Background="#9190CD" CornerRadius="10" Margin="10">
 				<StackPanel Orientation="Vertical">					
-					<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold" >TP en cours</Label>
+					<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold">TP en cours</Label>
+					<Button Name="TestAddPromo" Click="Button_Click">Test AddPromo</Button>
+					<ItemsControl ItemsSource="{Binding Promotions}"> <!--Accéder aux données de Promotions-->
+						<ItemsControl.ItemTemplate> <!--Mise en page des données qui seront affichées-->
+							<DataTemplate>
+								<StackPanel Margin="5,5,5,5">
+									<Label Content="{Binding IdPromotion}"></Label>
+									<Label Content="{Binding NomPromotion}"></Label>
+								</StackPanel>
+							</DataTemplate>
+						</ItemsControl.ItemTemplate>
+					</ItemsControl>
 				</StackPanel>
 			</Border>
 			<Border Grid.Column="2" Background="#FFFFFF" CornerRadius="10" Margin="10">
 				<Grid ColumnDefinitions="* *">
 
 					<StackPanel Grid.Column="0" Orientation="Vertical" Margin="10">
-						<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold" >Élève en difficulté</Label>
+						<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold">Élève en difficulté</Label>
 						<Border Background="#191C58" CornerRadius="10">
-							<Label HorizontalAlignment="Center" Foreground="#FFFFFF" FontWeight="Bold" >Nom de l'élève</Label>
+							<Label HorizontalAlignment="Center" Foreground="#FFFFFF" FontWeight="Bold">Nom de l'élève</Label>
 						</Border>
 					</StackPanel>
 
 					<StackPanel Grid.Column="1" Orientation="Vertical" Margin="10">
 						<Label HorizontalAlignment="Center" Foreground="#191C58" FontWeight="Bold">Élève ayant terminé</Label>
 						<Border Background="#191C58" CornerRadius="10">
-							<Label HorizontalAlignment="Center" Foreground="#FFFFFF" FontWeight="Bold" >Nom de l'élève</Label>
+							<Label HorizontalAlignment="Center" Foreground="#FFFFFF" FontWeight="Bold">Nom de l'élève</Label>
 						</Border>
 					</StackPanel>
 
