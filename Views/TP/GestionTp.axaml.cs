@@ -6,6 +6,7 @@ using Avalonia.Markup.Xaml;
 using DynamicData;
 using Papply.Models;
 using Papply.Storage;
+using Papply.ViewModels;
 
 namespace Papply.Views.TP;
 
@@ -31,9 +32,6 @@ public partial class GestionTp : UserControl
             DataStorage.Promotions.AddOrUpdate(promotion);
             
         }
-        
-        
-        //throw new System.NotImplementedException();
     }
     
 }

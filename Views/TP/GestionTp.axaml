@@ -6,8 +6,6 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Papply.Views.TP.GestionTp"
              x:DataType="local:GestionTpViewModel">
-    
-
     <StackPanel Background="#D9D9D9">
         <Label HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF3D00" FontSize="48"
                FontWeight="Bold">
@@ -28,7 +26,7 @@
             <ComboBox Background="White" FontWeight="Bold" FontSize="15" CornerRadius="20"
                       HorizontalContentAlignment="Center" PlaceholderText="Rechercher TP"
                       PlaceholderForeground="#41448A" BorderBrush="#41448A" BorderThickness="3" Width="350"
-                      ItemsSource="{Binding Promotions}">
+      ItemsSource="{Binding Promotions}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <Label Content="{Binding TravauxPratiques.TitreTp}"/>
@@ -44,6 +42,5 @@
                               Foreground="#41448A"
                               ShowProgressText="True"/>
             </StackPanel>
-        
-    </StackPanel>
+        </StackPanel>
 </UserControl>

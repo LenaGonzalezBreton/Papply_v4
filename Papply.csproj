@@ -31,5 +31,7 @@
         <DependentUpon>GestionTp.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+        <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.5" />
+
     </ItemGroup>
 </Project>
